@@ -10,10 +10,10 @@ export default function Home() {
     <Box>
       <Navbar/>
       <Grid container >
-        <Grid size={8} >
+        <Grid size={{xs:12,sm:4,md:8}} >
           <Header/>
         </Grid>
-        <Grid size={4} >
+        <Grid size={{xs:12,sm:4,md:4}} >
           <News/>
         </Grid>
         <Grid size={12}>
