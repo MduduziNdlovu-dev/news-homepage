@@ -87,32 +87,79 @@ export default function Home() {
         </Grid>
 
         <Grid size={12}>
-          <Grid container spacing={3}>
-            {[
-              { id: 'retro-pcs', title: 'Reviving Retro PCs', desc: 'What happens when old PCs are given modern upgrades.' },
-              { id: 'top-laptops', title: 'Top Laptops of 2022', desc: 'Our top picks for the best laptops of the year.' },
-              { id: 'gaming-growth', title: 'The Growth of Gaming', desc: 'How the pandemic has sparked fresh opportunities for gaming.' }
-            ].map((item, index) => (
-              <Grid size={{ xs: 12, sm: 6 }} key={index}>
-                <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                  <Image
-                    src={`/assets/images/image-${item.id}.jpg`}
-                    height={200}
-                    width={150}
-                    alt={`${item.id} image`}
-                    style={{ width: 'auto', height: '100%' }}
-                  />
-                  <Box>
-                    <Typography sx={{ color: 'hsl(5, 85%, 63%)', fontSize: '2.5rem', fontWeight: 700 }}>{`0${index + 1}`}</Typography>
-                    <Typography sx={{ fontWeight: 800 }}>{item.title}</Typography>
-                    <Typography sx={{ color: 'hsl(236, 13%, 42%)', marginTop: '1rem' }}>
-                      {item.desc}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
+          <Box sx={{
+            display: 'flex',
+            
+          }}>
+            {/* first */}
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',  // Aligns items to the start (top)
+              gap: '2rem',
+            }}>
+              <Box>
+                <Image src="/assets/images/image-retro-pcs.jpg" height={200} width={150} alt='retro image'/>
+              </Box>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start', // Align text items to the start (top)
+                justifyContent: 'center',
+                
+              }}>
+                <Typography sx={{color:'hsl(5, 85%, 63%)',fontSize:'2.5rem', fontWeight:700}}>01</Typography>
+                <Typography sx={{fontWeight:800}}>Reviving Retro PCs</Typography>
+                <Typography sx={{color:'hsl(236, 13%, 42%)', marginTop:'1rem',paddingRight:'2rem'}}>What happens when old PCs are given modern upgrades</Typography>
+              </Box>
+            </Box>
+            {/* second */}
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',  // Aligns items to the start (top)
+              gap: '2rem',
+            }}>
+              <Box>
+                <Image src="/assets/images/image-top-laptops.jpg" height={200} width={150} alt='retro image'/>
+              </Box>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start', // Align text items to the start (top)
+                justifyContent: 'center',
+              }}>
+                <Typography sx={{color:'hsl(5, 85%, 63%)',fontSize:'2.5rem', fontWeight:700}}>01</Typography>
+                <Typography sx={{fontWeight:800}}>Reviving Retro PCs</Typography>
+                <Typography sx={{color:'hsl(236, 13%, 42%)', marginTop:'1rem',paddingRight:'2rem'}}>What happens when old PCs are given modern upgrades</Typography>
+              </Box>
+            </Box>
+            {/* third  */}
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',  // Aligns items to the start (top)
+              gap: '2rem',
+            }}>
+              <Box>
+                <Image src="/assets/images/image-gaming-growth.jpg" height={200} width={150} alt='retro image'/>
+              </Box>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start', // Align text items to the start (top)
+                justifyContent: 'center',
+              }}>
+                <Typography sx={{color:'hsl(5, 85%, 63%)',fontSize:'2.5rem', fontWeight:700}}>01</Typography>
+                <Typography sx={{fontWeight:800}}>Reviving Retro PCs</Typography>
+                <Typography sx={{color:'hsl(236, 13%, 42%)', marginTop:'1rem',paddingRight:'2rem'}}>What happens when old PCs are given modern upgrades</Typography>
+              </Box>
+            </Box>
+
+          </Box>
         </Grid>
       </Grid>
     </Box>
