@@ -4,12 +4,12 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <Grid container>
-      <Grid >
+    <Grid container spacing={2}>
+      <Grid size={12}>
         <Image src="/assets/images/image-web-3-desktop.jpg" width={750} height={350} alt=""/>
       </Grid>
       <Grid container>
-        <Grid size={6}>
+        <Grid size={{xs:12,sm:8,md:6}}>
           <Typography variant="h4" sx={{
             fontSize: '3rem',
             fontWeight: 900,
