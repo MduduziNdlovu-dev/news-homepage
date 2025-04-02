@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -14,18 +15,26 @@ const Navbar: React.FC = () => {
     setAnchorEl(null);
   };
 
-  const menuItems = ["Home", "About", "Services", "Portfolio", "Contact"];
+  const menuItems = ["Home", "New", "Popular", "Trending", "Categories"];
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#333" }}>
-      <Toolbar>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "transparent",
+        color: "black",
+        boxShadow: "none",
+      }}
+    >
+      <Toolbar sx={{ minHeight: "auto", }}>
         {/* Logo */}
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Logo
+          <Image src="/assets/images/logo.svg" alt="Logo" width={70} height={40}/>
+
         </Typography>
 
         {/* Desktop Menu */}
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <Box sx={{ display: { xs: "none", md: "flex", color: "hsl(236, 13%, 42%)" } }}>
           {menuItems.map((item, index) => (
             <Typography key={index} sx={{ margin: "0 15px", cursor: "pointer" }}>
               {item}
@@ -49,7 +58,7 @@ const Navbar: React.FC = () => {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{ display: { xs: "block", md: "none", color: "hsl(236, 13%, 42%)" } }}
         >
           {menuItems.map((item, index) => (
             <MenuItem key={index} onClick={handleMenuClose}>
